@@ -2,10 +2,10 @@ public class sortingJava {
     public static void main(String[] args) {
         int[] tester = { 4, 2, 55, 6, 2, 1 };
         // insert tests here
-        insertionSort(tester);
-        for (int i : tester) {
-            System.out.println(i + " ");
-        }
+        // insertionSort(tester);
+        // for (int i : tester) {
+        // System.out.println(i + " ");
+        // }
     }
 
     /**
@@ -29,6 +29,24 @@ public class sortingJava {
             }
             array[i + 1] = key;
         }
+        return array;
+    }
+
+    public static int[] selectionSort(int[] array) {
+        for (int i = 0; i < array.length; i++) {
+            int minIdx = i;
+
+            for (int j = i + 1; j < array.length; j++) {
+                if (array[j] < array[minIdx]) {
+                    minIdx = j;
+                }
+            }
+
+            int temp = array[i];
+            array[i] = array[minIdx];
+            array[minIdx] = temp;
+        }
+
         return array;
     }
 }

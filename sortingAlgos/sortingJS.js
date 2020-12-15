@@ -16,3 +16,22 @@ const insertionSort = (array) => {
   }
   return array;
 };
+
+const selectionSort = (array) => {
+  for (var i = 0; i < array.length; i++) {
+    var minIdx = i;
+
+    for (var j = i + 1; j < array.length; j++) {
+      if (array[j] > arr[minIdx]) {
+        minIdx = j;
+      }
+    }
+
+    //swap the numbers
+    var temp = array[i];
+    array[i] = array[minIdx];
+    array[minIdx] = temp;
+  }
+
+  return array;
+};
