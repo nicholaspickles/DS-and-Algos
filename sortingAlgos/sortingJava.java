@@ -1,8 +1,16 @@
+package sortingAlgos;
+
 public class sortingJava {
     public static void main(String[] args) {
         int[] tester = { 4, 2, 55, 6, 2, 1 };
         // insert tests here
+
         // insertionSort(tester);
+        // for (int i : tester) {
+        // System.out.println(i + " ");
+        // }
+
+        // selectionSort((tester));
         // for (int i : tester) {
         // System.out.println(i + " ");
         // }
