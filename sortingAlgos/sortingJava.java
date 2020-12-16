@@ -5,13 +5,15 @@ public class sortingJava {
         int[] tester = { 4, 2, 55, 6, 2, 1 };
         // insert tests here
 
-        /**
-         * insertionSort(tester); for (int i : tester) { System.out.println(i + " "); }
-         * 
-         * selectionSort((tester)); for (int i : tester) { System.out.println(i + " ");
-         * }
-         **/
-        mergeSort(tester, 0, tester.length);
+        // insertionSort(tester);
+        // for (int i : tester) {
+        // System.out.println(i + " ");
+        // }
+
+        // selectionSort((tester)); for (int i : tester) { System.out.println(i + " ");
+        // }
+
+        mergeSort(tester, 0, tester.length - 1);
         for (int i : tester) {
             System.out.println(i + " ");
         }
@@ -71,16 +73,16 @@ public class sortingJava {
             lowHalf[i] = array[startIdx + i];
         }
 
-        for (int i = 0; i < len2; i++) {
-            highHalf[i] = array[midIdx + 1 + i];
+        for (int j = 0; j < len2; j++) {
+            highHalf[j] = array[midIdx + 1 + j];
         }
 
         int k = startIdx;
         int j = 0;
         int i = 0;
 
-        while (i < lowHalf.length && j < highHalf.length) {
-            if (lowHalf[i] < highHalf[j]) {
+        while ((i < lowHalf.length) && (j < highHalf.length)) {
+            if (lowHalf[i] <= highHalf[j]) {
                 array[k] = lowHalf[i];
                 i++;
             } else {
@@ -109,7 +111,7 @@ public class sortingJava {
     }
 
     public static int[] mergeSort(int[] array, int startIdx, int endIdx) {
-        int midIdx = (int) Math.floor((startIdx + endIdx) / 2);
+        int midIdx = ((startIdx + endIdx) / 2);
 
         if (startIdx < endIdx) {
             mergeSort(array, startIdx, midIdx);
